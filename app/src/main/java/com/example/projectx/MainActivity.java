@@ -20,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     EditText email,pass;
-    Button button;
+    Button button ,button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,19 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.emailAddress);
         pass = findViewById(R.id.passWord);
         button = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Create Account",Toast.LENGTH_LONG).show();
+//                Intent explicitIntent = new Intent(this, HomeActivity.class);
+                Intent intent=new Intent(getApplicationContext(), CreateAccountActivity.class);
+
+// Starting the activity using the explicit intent
+                startActivity(intent);
+            }
+        });
 
 //         class User {
 //            private String email;

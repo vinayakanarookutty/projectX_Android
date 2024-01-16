@@ -14,15 +14,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    Button button2;
+
 
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
-        button2 = findViewById(R.id.button2);
 
-        button2.setOnClickListener();
+
+
 
 
     }
