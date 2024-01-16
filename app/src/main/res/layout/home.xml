@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".HomeActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:alpha="0.7"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="220px"
+                android:layout_height="180px"
+                android:layout_marginTop="20px"
+                android:layout_marginLeft="100px"
+                android:padding="5dp"
+                android:src="@drawable/user"
+                android:onClick="showPopup"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hai Vinayak"
+                android:textSize="32dp"
+                android:fontFamily="sans-serif"
+                android:textFontWeight="800"
+                android:layout_marginLeft="355px"
+                android:layout_marginTop="58px"
+                android:textColor="@color/white"
+
+                />
+<!--            <ImageView-->
+<!--                android:layout_width="220px"-->
+<!--                android:layout_height="180px"-->
+<!--                android:layout_marginTop="20px"-->
+<!--                android:layout_marginLeft="800px"-->
+
+<!--                android:padding="5dp"-->
+<!--                android:src="@drawable/baseline_logout_24" />-->
+
+        </RelativeLayout>
+
+            <TextView
+                android:layout_width="550px"
+                android:layout_height="300px"
+                android:textSize="52dp"
+                android:fontFamily="sans-serif"
+                android:textFontWeight="900"
+                android:textColor="@color/white"
+                android:text="Courses"
+                android:layout_marginLeft="300px"
+                android:layout_marginTop="230px"
+                />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:layout_marginTop="500px"
+            android:orientation="horizontal"
+            android:layout_marginLeft="100px"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:background="@color/white"
+                app:cardCornerRadius="40px"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:layout_marginLeft="500px"
+                android:background="@color/white"
+                app:cardCornerRadius="40px"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:layout_marginTop="1000px"
+            android:orientation="horizontal"
+            android:layout_marginLeft="100px"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:background="@color/white"
+                app:cardCornerRadius="40px"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:layout_marginLeft="500px"
+                android:background="@color/white"
+                app:cardCornerRadius="40px"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:layout_marginTop="1500px"
+            android:orientation="horizontal"
+            android:layout_marginLeft="100px"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:background="@color/white"
+                app:cardCornerRadius="40px"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="400px"
+                android:layout_height="400px"
+                android:layout_marginLeft="500px"
+                android:background="@color/white"
+                app:cardCornerRadius="40px"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px">
+
+    </RelativeLayout>
+
+</RelativeLayout>
