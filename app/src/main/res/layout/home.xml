@@ -12,7 +12,6 @@
         android:background="@color/primary"
         android:alpha="0.7"
         android:orientation="vertical"
-
         >
 
 
