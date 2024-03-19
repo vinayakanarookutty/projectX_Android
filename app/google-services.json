@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "432051918000",
+    "project_id": "projecx-c8c88",
+    "storage_bucket": "projecx-c8c88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432051918000:android:86b702d058b95346835775",
+        "android_client_info": {
+          "package_name": "com.example.projectx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjFyaUCMawcrmn-sMe19T1RWNGTaYwAx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -102,15 +102,15 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enter Your Qualification"
+                android:text="Enter Your Mobile No"
 
                 />
             <EditText
-                android:id="@+id/qualification"
+                android:id="@+id/mobileNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Qualification"
+                android:hint="Mobile No"
                 />
             <View
                 android:layout_width="wrap_content"

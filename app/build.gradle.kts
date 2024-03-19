@@ -1,10 +1,14 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
+
+
 
 android {
     namespace = "com.example.projectx"
     compileSdk = 34
+
 
     defaultConfig {
         applicationId = "com.example.projectx"
@@ -26,6 +30,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -37,6 +45,7 @@ dependencies {
 
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.google.firebase:firebase-firestore:24.10.2")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

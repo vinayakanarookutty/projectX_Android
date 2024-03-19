@@ -1,151 +1,690 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="status"
+            type="com.example.projectx.Status" />
+    </data>
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background"
+
     tools:context=".HomeActivity">
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primary"
         android:alpha="0.7"
-        android:orientation="vertical"
-        >
+        android:background="@color/theme"
+        android:orientation="vertical">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="280px"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="220px"
-                android:layout_height="180px"
-                android:layout_marginTop="20px"
-                android:layout_marginLeft="100px"
-                android:padding="5dp"
-                android:src="@drawable/user"
-                android:onClick="showPopup"
-                />
+            <!--            <ImageView-->
+            <!--                android:layout_width="220px"-->
+            <!--                android:layout_height="180px"-->
+            <!--                android:layout_marginTop="20px"-->
+            <!--                android:layout_marginLeft="100px"-->
+            <!--                android:padding="5dp"-->
+            <!--                android:src="@drawable/user"-->
+            <!--                android:onClick="showPopup"-->
+            <!--                />-->
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hai Vinayak"
-                android:textSize="32dp"
+                android:layout_marginLeft="35px"
+                android:layout_marginTop="38px"
                 android:fontFamily="sans-serif"
-                android:textFontWeight="800"
-                android:layout_marginLeft="355px"
-                android:layout_marginTop="58px"
+                android:text="Whatsapp"
                 android:textColor="@color/white"
+                android:textFontWeight="800"
+                android:textSize="32dp"
 
                 />
-<!--            <ImageView-->
-<!--                android:layout_width="220px"-->
-<!--                android:layout_height="180px"-->
-<!--                android:layout_marginTop="20px"-->
-<!--                android:layout_marginLeft="800px"-->
 
-<!--                android:padding="5dp"-->
-<!--                android:src="@drawable/baseline_logout_24" />-->
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="180px"
+                android:layout_marginLeft="770px"
+                android:layout_marginTop="20px"
+
+                android:padding="5dp"
+                android:src="@drawable/baseline_camera_alt_24" />
+
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="180px"
+                android:layout_marginLeft="900px"
+                android:layout_marginTop="20px"
+
+                android:padding="5dp"
+                android:src="@drawable/baseline_search_24" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150px">
+
+                <ImageView
+                    android:layout_width="120px"
+                    android:layout_height="180px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_supervised_user_circle_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="185px"
+                    android:layout_marginTop="38px"
+                    android:fontFamily="sans-serif"
+                    android:text="Chats"
+                    android:textColor="@color/white"
+                    android:textFontWeight="800"
+                    android:textSize="22dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="455px"
+                    android:layout_marginTop="38px"
+                    android:fontFamily="sans-serif"
+                    android:text="Updates"
+                    android:textColor="@color/white"
+                    android:textFontWeight="800"
+                    android:textSize="22dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="805px"
+                    android:layout_marginTop="38px"
+                    android:fontFamily="sans-serif"
+                    android:text="Calls"
+                    android:textColor="@color/white"
+                    android:textFontWeight="800"
+                    android:textSize="22dp"
+
+                    />
+
+            </RelativeLayout>
 
         </RelativeLayout>
+
+        <TextView
+            android:layout_width="550px"
+            android:layout_height="300px"
+            android:layout_marginLeft="35px"
+            android:layout_marginTop="300px"
+            android:fontFamily="sans-serif"
+            android:text="Status"
+            android:textColor="@color/white"
+            android:textFontWeight="900"
+            android:textSize="32dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300px"
+            android:layout_marginTop="400px"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="190px"
+                android:layout_height="210px"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="5px"
+
+                android:padding="5dp"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75px"
+                android:layout_marginTop="208px"
+                android:fontFamily="sans-serif"
+                android:text="@{status.name}"
+                android:textColor="@color/white"
+                android:textFontWeight="800"
+                android:textSize="22dp"
+
+                />
+
+            <ImageView
+                android:layout_width="190px"
+                android:layout_height="210px"
+                android:layout_marginLeft="300px"
+                android:layout_marginTop="5px"
+
+                android:padding="5dp"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315px"
+                android:layout_marginTop="208px"
+                android:fontFamily="sans-serif"
+                android:text="Raman"
+                android:textColor="@color/white"
+                android:textFontWeight="800"
+                android:textSize="22dp"
+
+                />
+
+            <ImageView
+                android:layout_width="190px"
+                android:layout_height="210px"
+                android:layout_marginLeft="550px"
+                android:layout_marginTop="5px"
+
+                android:padding="5dp"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="555px"
+                android:layout_marginTop="208px"
+                android:fontFamily="sans-serif"
+                android:text="Varun"
+                android:textColor="@color/white"
+                android:textFontWeight="800"
+                android:textSize="22dp"
+
+                />
+
+            <ImageView
+                android:layout_width="190px"
+                android:layout_height="210px"
+                android:layout_marginLeft="810px"
+                android:layout_marginTop="5px"
+
+                android:padding="5dp"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="805px"
+                android:layout_marginTop="208px"
+                android:fontFamily="sans-serif"
+                android:text="Raghav"
+                android:textColor="@color/white"
+                android:textFontWeight="800"
+                android:textSize="22dp"
+
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="550px"
+            android:layout_height="300px"
+            android:layout_marginLeft="35px"
+            android:layout_marginTop="720px"
+            android:fontFamily="sans-serif"
+            android:text="Channels"
+            android:textColor="@color/white"
+            android:textFontWeight="900"
+            android:textSize="32dp" />
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="180px"
+            android:layout_marginLeft="930px"
+            android:layout_marginTop="695px"
+
+            android:padding="5dp"
+            android:src="@drawable/baseline_add_24" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="330px"
+            android:layout_marginTop="810px">
+
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="180px"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="10px"
+
+                android:padding="5dp"
+                android:src="@drawable/user" />
 
             <TextView
                 android:layout_width="550px"
                 android:layout_height="300px"
-                android:textSize="52dp"
+                android:layout_marginLeft="180px"
+                android:layout_marginTop="50px"
                 android:fontFamily="sans-serif"
-                android:textFontWeight="900"
+                android:text="CNBC-TV18"
                 android:textColor="@color/white"
-                android:text="Courses"
-                android:layout_marginLeft="300px"
-                android:layout_marginTop="230px"
-                />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="500px"
-            android:layout_marginTop="500px"
-            android:orientation="horizontal"
-            android:layout_marginLeft="100px"
-            >
-            <androidx.cardview.widget.CardView
-                android:layout_width="400px"
-                android:layout_height="400px"
-                android:background="@color/white"
-                app:cardCornerRadius="40px"
-                />
+                android:textFontWeight="900"
+                android:textSize="28dp" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="400px"
-                android:layout_height="400px"
-                android:layout_marginLeft="500px"
-                android:background="@color/white"
-                app:cardCornerRadius="40px"
-                />
+            <TextView
+                android:layout_width="600px"
+                android:layout_height="300px"
+                android:layout_marginLeft="180px"
+                android:layout_marginTop="150px"
+                android:fontFamily="sans-serif"
+                android:text="Earth quake occured in japan in the cause of tsunami occured in america"
+                android:textColor="@color/white"
+                android:textFontWeight="900"
+                android:textSize="17dp" />
 
+            <!--            <ImageView-->
+            <!--                android:layout_width="120px"-->
+            <!--                android:layout_height="300px"-->
+            <!--                android:layout_marginTop="105px"-->
+            <!--                android:layout_marginLeft="850px"-->
 
-
+            <!--                android:padding="5dp"-->
+            <!--                android:src="@drawable/backgroundimage" />-->
 
         </RelativeLayout>
 
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="500px"
-            android:layout_marginTop="1000px"
-            android:orientation="horizontal"
-            android:layout_marginLeft="100px"
-            >
-            <androidx.cardview.widget.CardView
-                android:layout_width="400px"
-                android:layout_height="400px"
-                android:background="@color/white"
-                app:cardCornerRadius="40px"
-                />
+            android:layout_height="330px"
+            android:layout_marginTop="1100px">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="400px"
-                android:layout_height="400px"
-                android:layout_marginLeft="500px"
-                android:background="@color/white"
-                app:cardCornerRadius="40px"
-                />
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="180px"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="10px"
+
+                android:padding="5dp"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="550px"
+                android:layout_height="300px"
+                android:layout_marginLeft="180px"
+                android:layout_marginTop="50px"
+                android:fontFamily="sans-serif"
+                android:text="BBC-World"
+                android:textColor="@color/white"
+                android:textFontWeight="900"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="600px"
+                android:layout_height="300px"
+                android:layout_marginLeft="180px"
+                android:layout_marginTop="150px"
+                android:fontFamily="sans-serif"
+                android:text="Building Collapsed in North Africa Because of Hurricane"
+                android:textColor="@color/white"
+                android:textFontWeight="900"
+                android:textSize="17dp" />
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="120px"-->
+            <!--                android:layout_height="300px"-->
+            <!--                android:layout_marginTop="105px"-->
+            <!--                android:layout_marginLeft="850px"-->
+
+            <!--                android:padding="5dp"-->
+            <!--                android:src="@drawable/backgroundimage" />-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="330px"
+            android:layout_marginTop="1350px">
+
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="180px"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="10px"
+
+                android:padding="5dp"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="550px"
+                android:layout_height="300px"
+                android:layout_marginLeft="180px"
+                android:layout_marginTop="50px"
+                android:fontFamily="sans-serif"
+                android:text="NEWS18-INDIA"
+                android:textColor="@color/white"
+                android:textFontWeight="900"
+                android:textSize="28dp" />
+
+            <TextView
+                android:layout_width="600px"
+                android:layout_height="300px"
+                android:layout_marginLeft="180px"
+                android:layout_marginTop="150px"
+                android:fontFamily="sans-serif"
+                android:text="KSU Declared strike in CUSAT and there will be a march to adminstrative block"
+                android:textColor="@color/white"
+                android:textFontWeight="900"
+                android:textSize="17dp" />
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="120px"-->
+            <!--                android:layout_height="300px"-->
+            <!--                android:layout_marginTop="105px"-->
+            <!--                android:layout_marginLeft="850px"-->
+
+            <!--                android:padding="5dp"-->
+            <!--                android:src="@drawable/backgroundimage" />-->
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="500px"
-            android:layout_marginTop="1500px"
-            android:orientation="horizontal"
-            android:layout_marginLeft="100px"
-            >
-            <androidx.cardview.widget.CardView
-                android:layout_width="400px"
-                android:layout_height="400px"
-                android:background="@color/white"
-                app:cardCornerRadius="40px"
-                />
+            android:layout_marginTop="1700px"
+            android:orientation="horizontal">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="400px"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="10px"
+                android:fontFamily="sans-serif"
+                android:text="Find Channels"
+                android:textColor="@color/white"
+                android:textFontWeight="900"
+                android:textSize="27dp" />
+
+            <RelativeLayout
+                android:layout_width="300px"
                 android:layout_height="400px"
-                android:layout_marginLeft="500px"
-                android:background="@color/white"
-                app:cardCornerRadius="40px"
-                />
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="100px">
+
+                <ImageView
+                    android:layout_width="190px"
+                    android:layout_height="210px"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginTop="5px"
+
+                    android:padding="5dp"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="200px"
+                    android:fontFamily="sans-serif"
+                    android:text="CN-Cartoon"
+                    android:textColor="@color/black"
+                    android:textFontWeight="900"
+                    android:textSize="17dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200px"
+                    android:layout_height="70px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="280px"
+                    android:background="@color/white"
+                    app:cardCornerRadius="40px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30px"
+                        android:fontFamily="sans-serif"
+                        android:text="Follow"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="17dp"
+
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300px"
+                android:layout_height="400px"
+                android:layout_marginLeft="320px"
+                android:layout_marginTop="100px">
+
+                <ImageView
+                    android:layout_width="190px"
+                    android:layout_height="210px"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginTop="5px"
+
+                    android:padding="5dp"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="200px"
+                    android:fontFamily="sans-serif"
+                    android:text="Asianet-TV"
+                    android:textColor="@color/black"
+                    android:textFontWeight="900"
+                    android:textSize="17dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200px"
+                    android:layout_height="70px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="280px"
+                    android:background="@color/white"
+                    app:cardCornerRadius="40px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30px"
+                        android:fontFamily="sans-serif"
+                        android:text="Follow"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="17dp"
+
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="300px"
+                android:layout_height="400px"
+                android:layout_marginLeft="600px"
+                android:layout_marginTop="100px">
+
+                <ImageView
+                    android:layout_width="190px"
+                    android:layout_height="210px"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginTop="5px"
+
+                    android:padding="5dp"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="200px"
+                    android:fontFamily="sans-serif"
+                    android:text="MohanLal"
+                    android:textColor="@color/black"
+                    android:textFontWeight="900"
+                    android:textSize="17dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200px"
+                    android:layout_height="70px"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="280px"
+                    android:background="@color/white"
+                    app:cardCornerRadius="40px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30px"
+                        android:fontFamily="sans-serif"
+                        android:text="Follow"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="17dp"
+
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200px"
+                android:layout_height="500px"
+                android:layout_marginLeft="850px"
+                android:layout_marginTop="10px">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200px"
+                    android:layout_height="170px"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginTop="60px"
+                    android:background="@color/white"
+                    app:cardCornerRadius="40px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10px"
+
+
+                        android:padding="5dp"
+                        android:src="@drawable/baseline_add_24" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200px"
+                    android:layout_height="170px"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginTop="270px"
+                    android:background="@color/white"
+                    app:cardCornerRadius="40px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10px"
+
+
+                        android:padding="5dp"
+                        android:src="@drawable/baseline_camera_alt_24" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="400px"-->
+        <!--                android:layout_height="400px"-->
+        <!--                android:background="@color/white"-->
+        <!--                app:cardCornerRadius="40px"-->
+        <!--                />-->
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="400px"-->
+        <!--                android:layout_height="400px"-->
+        <!--                android:layout_marginLeft="500px"-->
+        <!--                android:background="@color/white"-->
+        <!--                app:cardCornerRadius="40px"-->
+        <!--                />-->
+
+
+        <!--        </RelativeLayout>-->
+
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="500px"-->
+        <!--            android:layout_marginTop="1000px"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:layout_marginLeft="100px"-->
+        <!--            >-->
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="400px"-->
+        <!--                android:layout_height="400px"-->
+        <!--                android:background="@color/white"-->
+        <!--                app:cardCornerRadius="40px"-->
+        <!--                />-->
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="400px"-->
+        <!--                android:layout_height="400px"-->
+        <!--                android:layout_marginLeft="500px"-->
+        <!--                android:background="@color/white"-->
+        <!--                app:cardCornerRadius="40px"-->
+        <!--                />-->
+
+        <!--        </RelativeLayout>-->
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="500px"-->
+        <!--            android:layout_marginTop="1500px"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:layout_marginLeft="100px"-->
+        <!--            >-->
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="400px"-->
+        <!--                android:layout_height="400px"-->
+        <!--                android:background="@color/white"-->
+        <!--                app:cardCornerRadius="40px"-->
+        <!--                />-->
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                android:layout_width="400px"-->
+        <!--                android:layout_height="400px"-->
+        <!--                android:layout_marginLeft="500px"-->
+        <!--                android:background="@color/white"-->
+        <!--                app:cardCornerRadius="40px"-->
+        <!--                />-->
+
+        <!--        </RelativeLayout>-->
+
+        <!--    </RelativeLayout>-->
+        <!--    <RelativeLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="200px">-->
+
+        <!--    </RelativeLayout>-->
 
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="200px">
-
-    </RelativeLayout>
-
 </RelativeLayout>
+</layout>
